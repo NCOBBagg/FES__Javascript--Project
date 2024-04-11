@@ -2,5 +2,10 @@
 
 
 async function findMovies() {
-    const URL = 
+    const URL = "http://www.omdbapi.com/?s=${movieName}&apikey=cca6a59"
+    const result = await fetch(`${URL}`)
+    const data = await result.json()
+    
 }
+
+findMovies()
