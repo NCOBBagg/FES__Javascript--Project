@@ -36,12 +36,15 @@
                 Find your favorite movie here.
             </h3>
             <div class="search__container">
-                <input type="text" class="search__bar" placeholder="Search Movie Title" id="search__box">
+                <input type="text" class="search__bar" placeholder="Search Movie Title" onkeyup="onSearchChange()" onclick="onSearchChange()">
                 <button class="input__btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
         </div>
+    </div>
+    <div class="movie__row">
+        <div class="movie__wrapper"></div>
     </div>
 </section>
 </body>
