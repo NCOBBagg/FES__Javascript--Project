@@ -180,6 +180,12 @@ MOVIE BOX STYLING
     position: relative;
 }
 
+.movie__img:hover {
+    transform: scale(0.9);
+    transition: all 300ms ease;
+}
+
+
 img {
     display: block;
     margin: 0 auto;
@@ -207,7 +213,6 @@ img {
 .movie__content:hover {
     opacity: 1;
 }
-
 
 .movie__content p {
     margin-top: 30px;

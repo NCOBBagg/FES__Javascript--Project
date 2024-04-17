@@ -4,14 +4,19 @@ const movieEl = document.querySelector('.movie__wrapper')
 
 async function onSearchChange(event) {
     const searchItem = event.target.value
-    const movieRes = await fetch(`http://www.omdbapi.com/?apikey=cca6a59&s=${searchItem}`)
+    const movieRes = await fetch(`https://www.omdbapi.com/?apikey=cca6a59&s=${searchItem}`)
     const movieData = await movieRes.json()
-    movieEl.innerHTML = movieData.map((movie) => movieHTML(movie)).join('')
+    if (movieData.Search) {
+        movieEl.innerHTML = movieData.Search.map((movie) => movieHTML(movie)).join('')
+    }
+    
+    else {
+        console.error('No movies found')
+    }
 }
 
-
 function movieHTML(movie) {
-    return `<div class="movie" on>
+    return `<div class="movie">
     <div class="movie__img">
         <img src="${movie.Poster}" alt="">
         <div class="movie__content">
