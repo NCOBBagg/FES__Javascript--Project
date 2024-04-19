@@ -30,5 +30,5 @@ function movieHTML(movie) {
 
 function movieInfo(imdbID) {
     localStorage.setItem("imdbID", imdbID)
-    window.location.href = `http://127.0.0.1:5501/movie.html`
+    window.location.href = `${window.location.origin}/movie.html`
 }
