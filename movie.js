@@ -13,16 +13,19 @@ async function movieDescription() {
         movieResult = [movieResult]
     }
 
-    const movieDescriptionEl = document.querySelector('.movie__info--container')
-    if (movieResult.Search) {
-        movieDescriptionEl.innerHTML = movieResult.Search.map((movie) => movieDescHTML(movie)).join()
-    }
-    else {
-        console.error("No IMBD data found")
-    }
+    const movieDescriptionEl = document.querySelector(' .movie__info--container')
+    movieDescriptionEl.innerHTML = movieResult.map((movie) => movieDescHTML(movie))
+    console.log(movieResult)
+    
+    // if (movieResult.Search) {
+    //     movieDescriptionEl.innerHTML = movieResult.Search.map((movie) => movieDescHTML(movie)).join()
+    // }
+    // else {
+    //     console.error("No IMBD data found")
+    // }
 }
 
-movieDescription()
+ movieDescription()
 
 function movieDescHTML(movie) {
     return `<div class="movie__img--wrapper">
