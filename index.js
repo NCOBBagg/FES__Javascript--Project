@@ -29,6 +29,6 @@ function movieHTML(movie) {
 }
 
 function movieInfo(imdbID) {
-    localStorage.setItem("imbd", imdbID)
+    localStorage.setItem("imdbID", imdbID)
     window.location.href = 'movie.html'
 }
